@@ -1,5 +1,5 @@
 # To use the site, first clone it:
-[Clone the repository](git clone https://github.com/munyi-victor/masoko)
+### `git clone https://github.com/munyi-victor/masoko`
 
 ## Navigate to the `masoko-client` folder:
 ### `cd masoko-client`

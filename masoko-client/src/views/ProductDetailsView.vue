@@ -32,7 +32,7 @@ const addToCart = async (product) => {
 <template>
   <div>
     <div class="container-fluid">
-      <div class="card mt-4">
+      <div class="card mt-4 p-4">
         <div class="d-flex gap-1">
           <img :src="product.image_src" class="card-img-top" alt="Product image"  height="400px" />
           <img :src="product.image_src" class="card-img-top" alt="Product image"  height="400px" />

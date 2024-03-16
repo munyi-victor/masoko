@@ -1,4 +1,6 @@
 # Getting Started with Masoko
+
+To get started forst clone the repository:
 `git clone https://github.com/munyi-victor/masoko`
 
 ## Available scripts

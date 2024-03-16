@@ -1,18 +1,18 @@
 # To use the site, first clone it:
-[git clone https://github.com/munyi-victor/masoko]
+[Clone the repository](git clone https://github.com/munyi-victor/masoko)
 
-## Navigate to the 'masoko-client' folder:
-### 'cd masoko-client'
+## Navigate to the `masoko-client` folder:
+### `cd masoko-client`
 
 ## Install the necessary dependancies:
-### 'npm install'
-### 'npm install axios'
+### `npm install`
+### `npm install axios`
 
 ## To start the app frontend run 
-### 'npm run dev'
+### `npm run dev`
 
 ## Open another command tab and navigate to the backend:
-### 'cd backend'
+### `cd backend`
 
 ## Start the json-server by running
-### 'json-server --watch db.json'
+### `json-server --watch db.json`

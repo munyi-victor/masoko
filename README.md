@@ -7,7 +7,7 @@ To get started forst clone the repository:
 Navigate to the mosoko-client directory:
 ### `cd masoko-client`
 
-Install the necessary dependancies:
+## Install the necessary dependancies:
 ![image](https://github.com/munyi-victor/masoko/assets/124053147/44f18721-8f06-4e10-86a6-21730806e862)
 
 ### `npm install`

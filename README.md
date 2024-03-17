@@ -8,7 +8,8 @@ Navigate to the mosoko-client directory:
 ### `cd masoko-client`
 
 Install the necessary dependancies:
-<img align="left" src="C:/Users/munyi/OneDrive/Pictures/Screenshotss/dep.png" alt="screenshot of dependancies"/>
+![image](https://github.com/munyi-victor/masoko/assets/124053147/44f18721-8f06-4e10-86a6-21730806e862)
+
 ### `npm install`
 ### `npm install vue vuex vue-router axios bootstrap bootstrap-vue`
 ### `npm install @popperjs/core`

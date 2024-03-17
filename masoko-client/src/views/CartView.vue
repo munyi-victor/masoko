@@ -15,7 +15,9 @@ const fetchCartItems = async () => {
   }
 };
 
-onMounted(fetchCartItems);
+onMounted(() => {
+  fetchCartItems();
+});
 
 const removeFromCart = async (productId) => {
   try {
@@ -79,6 +81,24 @@ const updateTotalAmount = () => {
       </div>
 
       <div class="pay-section">
+        <div class="w-100 d-flex gap-2 justify-content-center">
+          <h5>Pay via:</h5>
+          <select class="w-75" v-model="paymentMethod">
+            <option value="M-Pesa">M-Pesa</option>
+            <option value="PayPal">PayPal</option>
+          </select>
+        </div>
+
+        <div class="w-100 d-flex justify-content-center">
+          <h5>Location:</h5> 
+          <select class="w-75">
+            <option value="Awendo">Awendo</option>
+            <option value="Kisii">Kisii</option>
+            <option value="Kitere">Kitere</option>
+            <option value="Migori">Migori</option> 
+            <option value="Rongo">Rongo</option>                         
+          </select>
+        </div>
         <h4>Total Amount: Ksh. {{ totalAmount }}</h4>
         <button class="btn btn-primary btn-dark w-75">Pay now</button>
       </div>

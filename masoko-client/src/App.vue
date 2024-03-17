@@ -1,5 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+
+import CartCount from '@/components/CartCount.vue';
 </script>
 
 <template>
@@ -17,6 +19,8 @@ import { RouterLink, RouterView } from "vue-router";
           <RouterLink to="/cart" class="btn btn-primary btn-dark mx-3"
             >Cart</RouterLink
           >
+
+          <CartCount/>
         </div>
       </nav>
     </div>

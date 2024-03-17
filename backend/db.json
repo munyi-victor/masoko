@@ -4,7 +4,7 @@
       "id": "1",
       "name": "HP Elitebook x360 830 G6",
       "price": "35000.00",
-      "quantity":"1",
+      "quantity": "1",
       "image_src": "https://th.bing.com/th/id/OIP.8gG2K50xH7QIjxrDmxw56wHaHa?rs=1&pid=ImgDetMain",
       "description": "HP Elitebook x360 830 G6 with a ram of 8 GB and a 500 GB SSD.",
       "more_details": "HP Elitebook x360 830 G6 with a ram of 8 GB and a 500 GB SSD.  HP Elitebook 840G with a ram of 8 GB and a 500 GB SSD. HP Elitebook x360 830 G6 with a ram of 8 GB and a 500 GB SSD."
@@ -66,13 +66,13 @@
       "more_details": "HP Probook 4340s with ram 4 GB and storage of 500 GB HDD. HP Probook 4340s with ram 4 GB and storage of 500 GB HDD. HP Probook 4340s with ram 4 GB and storage of 500 GB HDD."
     },
     {
-      "id": "5",
-      "name": "Canon EOS 80D DSRL Camera",
-      "price": "70000.00",
+      "id": "2",
+      "name": "HP Probook 4340s",
+      "price": "30000.00",
       "quantity": "1",
-      "image_src": "https://th.bing.com/th/id/R.613a8f40cb2958a6d5884c5848e034f8?rik=3R9Qxvw6jT65vA&riu=http%3a%2f%2fwww.bhphotovideo.com%2fimages%2fimages2500x2500%2fcanon_1263c005_eos_80d_dslr_camera_1225876.jpg&ehk=q7iUuM1osOg0j72aJ9G%2bAHfczWOH44VRoHxTAafiWjA%3d&risl=&pid=ImgRaw&r=0",
-      "description": "Canon EOS 80D DSRL Camera with 18-55mm lens 1263C005 B&H Photo.",
-      "more_details": "Canon EOS 80D DSRL Camera with 18-55mm lens 1263C005 B&H Photo. Canon EOS 80D DSRL Camera with 18-55mm lens 1263C005 B&H Photo. Canon EOS 80D DSRL Camera with 18-55mm lens 1263C005 B&H Photo. Canon EOS 80D DSRL Camera with 18-55mm lens 1263C005 B&H Photo."
+      "image_src": "https://www.laptoparena.net/images/HP_ProBook_4340s_C5C75EA_image_1.jpg",
+      "description": "HP Probook 4340s with ram 4 GB and storage of 500 GB HDD.",
+      "more_details": "HP Probook 4340s with ram 4 GB and storage of 500 GB HDD. HP Probook 4340s with ram 4 GB and storage of 500 GB HDD. HP Probook 4340s with ram 4 GB and storage of 500 GB HDD."
     }
   ]
 }

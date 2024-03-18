@@ -1,30 +1,102 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+import { ref, computed } from "vue";
+import axios from "axios";
 
-import CartCount from '@/components/CartCount.vue';
+import CartCount from "@/components/CartCount.vue";
+
+const searchQuery = ref("");
+const products = ref([]);
+
+try {
+  axios.get("http://localhost:3000/products").then((response) => {
+    products.value = response.data;
+  });
+} catch (error) {
+  console.error("Error fetching products: ", error);
+}
+
+const filteredProducts = computed(() => {
+  return products.value.filter((product) => {
+    return product.name.toLowerCase().includes(searchQuery.value.toLowerCase());
+  });
+});
 </script>
 
 <template>
   <header>
-    <div>
-      <nav class="nav">
-        <div>
-          <RouterLink to="/" class="link logo under-line">Masoko</RouterLink>
-        </div>
-        <div class="nav-links">
-          <RouterLink to="/" class="link">Home</RouterLink>
-          <RouterLink to="/about" class="link">About</RouterLink>
-        </div>
-        <div class="d-flex">
-          <RouterLink to="/cart" class="btn btn-primary btn-dark mx-3"
-            >Cart</RouterLink
-          >
+    <nav class="nav">
+      <div>
+        <RouterLink to="/" class="link logo under-line">Masoko</RouterLink>
+      </div>
+      <div class="nav-links">
+        <RouterLink to="/" class="link">Home</RouterLink>
+        <RouterLink to="/about" class="link">About</RouterLink>
+      </div>
 
-          <CartCount/>
-        </div>
-      </nav>
-    </div>
+      <div class="">
+        <form class="form d-flex">
+          <input
+            v-model="searchQuery"
+            type="search"
+            class="form-control me-2"
+            placeholder="Search for products..."
+            aria-label="Search"
+          />
+          <button type="submit" class="btn btn-outline-dark" title="search">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="d-flex">
+        <RouterLink to="/cart" class="btn btn-primary btn-dark mx-3"
+          >Cart</RouterLink
+        >
+
+        <CartCount />
+      </div>
+    </nav>
   </header>
+
+  <div class="container mt-3" v-if="filteredProducts.length >= 0">
+    <div class="row">
+      <div
+        v-for="product in filteredProducts"
+        :key="product.id"
+        class="col-md-4"
+      >
+        <div class="card px-2">
+          <img :src="product.image_src" class="card-img-top" />
+
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text" style="font-weight: bold">
+              {{ product.price }}
+            </p>
+            <p class="card-text">
+              {{ product.description }}
+            </p>
+
+            <div class="d-flex gap-2">
+              <RouterLink :to="'/' + product.id"
+                ><button class="btn btn-primary">
+                  View Product
+                </button></RouterLink
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    v-if="filteredProducts.length === 0"
+    class="d-flex justify-content-center"
+  >
+    <h5>The items you searched for are not available.</h5>
+  </div>
 
   <RouterView />
 </template>
@@ -64,7 +136,7 @@ nav {
 }
 
 .under-line::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -5px;
   left: 0;

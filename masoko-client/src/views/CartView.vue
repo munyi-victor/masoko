@@ -1,9 +1,10 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import axios from "axios";
 
 const cartItems = ref([]);
 const totalAmount = ref(0);
+const screenSmall = ref(false);
 
 const fetchCartItems = async () => {
   try {
@@ -15,8 +16,19 @@ const fetchCartItems = async () => {
   }
 };
 
+const checkSmallCreen = () => {
+  screenSmall.value = window.innerWidth < 760;
+}
+
 onMounted(() => {
   fetchCartItems();
+
+  window.addEventListener('resize', checkSmallCreen);
+  checkSmallCreen();
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', checkSmallCreen);
 });
 
 const removeFromCart = async (productId) => {

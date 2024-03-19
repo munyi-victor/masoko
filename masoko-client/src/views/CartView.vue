@@ -18,17 +18,17 @@ const fetchCartItems = async () => {
 
 const checkSmallCreen = () => {
   screenSmall.value = window.innerWidth < 760;
-}
+};
 
 onMounted(() => {
   fetchCartItems();
 
-  window.addEventListener('resize', checkSmallCreen);
+  window.addEventListener("resize", checkSmallCreen);
   checkSmallCreen();
 });
 
 onBeforeUnmount(() => {
-  window.removeEventListener('resize', checkSmallCreen);
+  window.removeEventListener("resize", checkSmallCreen);
 });
 
 const removeFromCart = async (productId) => {
@@ -42,12 +42,15 @@ const removeFromCart = async (productId) => {
 };
 
 const calculateTotalAmount = () => {
-  totalAmount.value = cartItems.value.reduce((total, item) => total + (item.price * item.quantity), 0);
+  totalAmount.value = cartItems.value.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
 };
 
 const updateTotalAmount = () => {
   calculateTotalAmount();
-}
+};
 </script>
 
 <template>
@@ -59,7 +62,7 @@ const updateTotalAmount = () => {
       <h5>Your cart is empty.</h5>
     </div>
 
-    <div class="col mt-3 d-flex gap-5 mx-4" v-else>
+    <div class="col d-flex gap-5 mx-4 cart-cont" v-else>
       <div class="d-flex-column">
         <div
           v-for="item in cartItems"
@@ -81,7 +84,11 @@ const updateTotalAmount = () => {
 
               <div class="d-flex gap-1">
                 <label for="quantity">Quantity:</label>
-                <input type="number" v-model="item.quantity" @input="updateTotalAmount" />
+                <input
+                  type="number"
+                  v-model="item.quantity"
+                  @input="updateTotalAmount"
+                />
               </div>
             </div>
 
@@ -102,13 +109,13 @@ const updateTotalAmount = () => {
         </div>
 
         <div class="w-100 d-flex justify-content-center">
-          <h5>Location:</h5> 
+          <h5>Location:</h5>
           <select class="w-75">
             <option value="Awendo">Awendo</option>
             <option value="Kisii">Kisii</option>
             <option value="Kitere">Kitere</option>
-            <option value="Migori">Migori</option> 
-            <option value="Rongo">Rongo</option>                         
+            <option value="Migori">Migori</option>
+            <option value="Rongo">Rongo</option>
           </select>
         </div>
         <h4>Total Amount: Ksh. {{ totalAmount }}</h4>
@@ -128,7 +135,7 @@ const updateTotalAmount = () => {
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 16px;
-  width: 100%;
+  width: 75%;
 }
 
 .pay-section {
@@ -137,9 +144,27 @@ const updateTotalAmount = () => {
   gap: 20px;
   border: 1px solid black;
   border-radius: 10px;
-  width: 100%;
+  width: 125%;
   height: 40vh;
   align-items: center;
   padding-top: 20px;
+}
+
+@media only screen and (max-width: 760px) {
+  .cart-cont {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .pay-section {
+    width: 100%;
+  }
 }
 </style>

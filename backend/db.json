@@ -57,22 +57,22 @@
   ],
   "cart": [
     {
-      "id": "2",
-      "name": "HP Probook 4340s",
-      "price": "30000.00",
+      "id": "1",
+      "name": "HP Elitebook x360 830 G6",
+      "price": "35000.00",
       "quantity": "1",
-      "image_src": "https://www.laptoparena.net/images/HP_ProBook_4340s_C5C75EA_image_1.jpg",
-      "description": "HP Probook 4340s with ram 4 GB and storage of 500 GB HDD.",
-      "more_details": "HP Probook 4340s with ram 4 GB and storage of 500 GB HDD. HP Probook 4340s with ram 4 GB and storage of 500 GB HDD. HP Probook 4340s with ram 4 GB and storage of 500 GB HDD."
+      "image_src": "https://th.bing.com/th/id/OIP.8gG2K50xH7QIjxrDmxw56wHaHa?rs=1&pid=ImgDetMain",
+      "description": "HP Elitebook x360 830 G6 with a ram of 8 GB and a 500 GB SSD.",
+      "more_details": "HP Elitebook x360 830 G6 with a ram of 8 GB and a 500 GB SSD.  HP Elitebook 840G with a ram of 8 GB and a 500 GB SSD. HP Elitebook x360 830 G6 with a ram of 8 GB and a 500 GB SSD."
     },
     {
-      "id": "2",
-      "name": "HP Probook 4340s",
-      "price": "30000.00",
+      "id": "3",
+      "name": "Samsung Galaxy A12",
+      "price": "17000.00",
       "quantity": "1",
-      "image_src": "https://www.laptoparena.net/images/HP_ProBook_4340s_C5C75EA_image_1.jpg",
-      "description": "HP Probook 4340s with ram 4 GB and storage of 500 GB HDD.",
-      "more_details": "HP Probook 4340s with ram 4 GB and storage of 500 GB HDD. HP Probook 4340s with ram 4 GB and storage of 500 GB HDD. HP Probook 4340s with ram 4 GB and storage of 500 GB HDD."
+      "image_src": "https://priceinsouthafrica.com/wp-content/uploads/2020/11/Samsung-Galaxy-A12-2048x1785.png",
+      "description": "Galaxy A12 has a ram of 4GB and internal storage of 64 GB.",
+      "more_details": "Galaxy A12 has a ram of 4GB and internal storage of 64 GB. Galaxy A12 has a ram of 4GB and internal storage of 64 GB. Galaxy A12 has a ram of 4GB and internal storage of 64 GB."
     }
   ]
 }

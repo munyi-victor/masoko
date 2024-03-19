@@ -31,4 +31,10 @@ div{
   position: absolute;
   right: 20px;
 }
+
+@media only screen and (max-width: 760px) {
+  div {
+    right: 50px;
+  }
+}
 </style>

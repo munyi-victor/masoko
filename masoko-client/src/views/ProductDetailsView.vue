@@ -56,7 +56,7 @@ onBeforeUnmount(() => {
             :src="product.image_src"
             class="card-img-top"
             alt="Product image"
-            height="400px"
+            height="300px"
           />
           </div>
           <div class="d-flex gap-1 justify-content-center" v-else>
@@ -64,19 +64,19 @@ onBeforeUnmount(() => {
             :src="product.image_src"
             class="card-img-top"
             alt="Product image"
-            height="400px"
+            height="300px"
           />
           <img
             :src="product.image_src"
             class="card-img-top"
             alt="Product image"
-            height="400px"
+            height="300px"
           />
           <img
             :src="product.image_src"
             class="card-img-top"
             alt="Product image"
-            height="400px"
+            height="300px"
           />
           </div>
         </div>

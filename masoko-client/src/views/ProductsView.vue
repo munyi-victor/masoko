@@ -17,7 +17,11 @@ onMounted(async () => {
 <template>
   <div class="container-fluid d-flex-colum">
     <div class="row">
-      <div class="col-md-4 cont-card" v-for="product in products" :key="product.id">
+      <div
+        class="col-md-4 cont-card"
+        v-for="product in products"
+        :key="product.id"
+      >
         <div class="card shadow mt-4 mb-4 px-3 py-2">
           <img
             :src="product.image_src"

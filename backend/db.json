@@ -5,6 +5,7 @@
       "name": "HP Elitebook x360 830 G6",
       "price": "35000.00",
       "quantity": "1",
+      "category": "electronics",
       "image_src": "https://th.bing.com/th/id/OIP.8gG2K50xH7QIjxrDmxw56wHaHa?rs=1&pid=ImgDetMain",
       "description": "HP Elitebook x360 830 G6 with a ram of 8 GB and a 500 GB SSD.",
       "more_details": "HP Elitebook x360 830 G6 with a ram of 8 GB and a 500 GB SSD.  HP Elitebook 840G with a ram of 8 GB and a 500 GB SSD. HP Elitebook x360 830 G6 with a ram of 8 GB and a 500 GB SSD."
@@ -14,6 +15,7 @@
       "name": "HP Probook 4340s",
       "price": "30000.00",
       "quantity": "1",
+      "category": "electronics",
       "image_src": "https://www.laptoparena.net/images/HP_ProBook_4340s_C5C75EA_image_1.jpg",
       "description": "HP Probook 4340s with ram 4 GB and storage of 500 GB HDD.",
       "more_details": "HP Probook 4340s with ram 4 GB and storage of 500 GB HDD. HP Probook 4340s with ram 4 GB and storage of 500 GB HDD. HP Probook 4340s with ram 4 GB and storage of 500 GB HDD."
@@ -23,6 +25,7 @@
       "name": "Samsung Galaxy A12",
       "price": "17000.00",
       "quantity": "1",
+      "category": "electronics",
       "image_src": "https://priceinsouthafrica.com/wp-content/uploads/2020/11/Samsung-Galaxy-A12-2048x1785.png",
       "description": "Galaxy A12 has a ram of 4GB and internal storage of 64 GB.",
       "more_details": "Galaxy A12 has a ram of 4GB and internal storage of 64 GB. Galaxy A12 has a ram of 4GB and internal storage of 64 GB. Galaxy A12 has a ram of 4GB and internal storage of 64 GB."
@@ -32,6 +35,7 @@
       "name": "Tecno Camon 19 Pro",
       "price": "29000.00",
       "quantity": "1",
+      "category": "electronics",
       "image_src": "https://th.bing.com/th/id/R.426d1d3a4787d1f5c8117deb587c553e?rik=fwI9db4y1rS5yQ&pid=ImgRaw&r=0",
       "description": "Tecno Camon 19 Pro with 8 GB ram and 256 GB internal storage.",
       "more_details": "Tecno Camon 19 Pro with 8 GB ram and 256 GB internal storage. Tecno Camon 19 Pro with 8 GB ram and 256 GB internal storage. Tecno Camon 19 Pro with 8 GB ram and 256 GB internal storage."
@@ -41,6 +45,7 @@
       "name": "Canon EOS 80D DSRL Camera",
       "price": "70000.00",
       "quantity": "1",
+      "category": "electronics",
       "image_src": "https://th.bing.com/th/id/R.613a8f40cb2958a6d5884c5848e034f8?rik=3R9Qxvw6jT65vA&riu=http%3a%2f%2fwww.bhphotovideo.com%2fimages%2fimages2500x2500%2fcanon_1263c005_eos_80d_dslr_camera_1225876.jpg&ehk=q7iUuM1osOg0j72aJ9G%2bAHfczWOH44VRoHxTAafiWjA%3d&risl=&pid=ImgRaw&r=0",
       "description": "Canon EOS 80D DSRL Camera with 18-55mm lens 1263C005 B&H Photo.",
       "more_details": "Canon EOS 80D DSRL Camera with 18-55mm lens 1263C005 B&H Photo. Canon EOS 80D DSRL Camera with 18-55mm lens 1263C005 B&H Photo. Canon EOS 80D DSRL Camera with 18-55mm lens 1263C005 B&H Photo. Canon EOS 80D DSRL Camera with 18-55mm lens 1263C005 B&H Photo."
@@ -50,9 +55,70 @@
       "name": "Ampex A18 Sub Woofer",
       "price": "6000.00",
       "quantity": "1",
+      "category": "electronics",
       "image_src": "https://th.bing.com/th/id/OIP.UxHHzd4c17L-J1CS3PHmowHaHa?rs=1&pid=ImgDetMain",
       "description": "Ampex A18 Multimedia Sub Woofer Speaker System 12000W.",
       "more_details": "Ampex A18 Multimedia Sub Woofer Speaker System 12000W. Ampex A18 Multimedia Sub Woofer Speaker System 12000W. Ampex A18 Multimedia Sub Woofer Speaker System 12000W. Ampex A18 Multimedia Sub Woofer Speaker System 12000W."
+    },
+    {
+      "id": "7",
+      "name": "Men Leather Jacket",
+      "price": "6000.00",
+      "quantity": "1",
+      "category": "fashion",
+      "image_src": "https://www.bing.com/ck/a?!&&p=d84dbde448629f69JmltdHM9MTcxMDgwNjQwMCZpZ3VpZD0wZWZlYzA4Zi04ODU4LTY1ZjQtMWIyNC1kMzMyODlkYTY0MjMmaW5zaWQ9NTU5NQ&ptn=3&ver=2&hsh=3&fclid=0efec08f-8858-65f4-1b24-d33289da6423&u=a1L2ltYWdlcy9zZWFyY2g_cT1tZW4lMjBqYWNrZXRzJTIwaW1hZ2VzJkZPUk09SVFGUkJBJmlkPTFERkUwQkVBN0YxRDM5QUEzNjkxN0MwQjEzOEYyMEU4Q0I2NTMxMUU&ntb=1",
+      "description": "Men's black leather jackets available. Are water proof and also are not faded by the sun.",
+      "more_details": "Men's black leather jackets available. Are water proof and also are not faded by the sun. Men's black leather jackets available. Are water proof and also are not faded by the sun. Men's black leather jackets available. Are water proof and also are not faded by the sun."
+    },
+    {
+      "id": "8",
+      "name": "Ampex A18 Sub Woofer",
+      "price": "6000.00",
+      "quantity": "1",
+      "category": "fashion",
+      "image_src": "https://th.bing.com/th/id/OIP.UxHHzd4c17L-J1CS3PHmowHaHa?rs=1&pid=ImgDetMain",
+      "description": "Ampex A18 Multimedia Sub Woofer Speaker System 12000W.",
+      "more_details": ""
+    },
+    {
+      "id": "9",
+      "name": "Ampex A18 Sub Woofer",
+      "price": "6000.00",
+      "quantity": "1",
+      "category": "fashion",
+      "image_src": "https://th.bing.com/th/id/OIP.UxHHzd4c17L-J1CS3PHmowHaHa?rs=1&pid=ImgDetMain",
+      "description": "Ampex A18 Multimedia Sub Woofer Speaker System 12000W.",
+      "more_details": ""
+    },
+    {
+      "id": "10",
+      "name": "Ampex A18 Sub Woofer",
+      "price": "6000.00",
+      "quantity": "1",
+      "category": "fashion",
+      "image_src": "https://th.bing.com/th/id/OIP.UxHHzd4c17L-J1CS3PHmowHaHa?rs=1&pid=ImgDetMain",
+      "description": "Ampex A18 Multimedia Sub Woofer Speaker System 12000W.",
+      "more_details": ""
+    },
+    {
+      "id": "11",
+      "name": "Ampex A18 Sub Woofer",
+      "price": "6000.00",
+      "quantity": "1",
+      "category": "fashion",
+      "image_src": "https://th.bing.com/th/id/OIP.UxHHzd4c17L-J1CS3PHmowHaHa?rs=1&pid=ImgDetMain",
+      "description": "Ampex A18 Multimedia Sub Woofer Speaker System 12000W.",
+      "more_details": ""
+    },
+    {
+      "id": "12",
+      "name": "Ampex A18 Sub Woofer",
+      "price": "6000.00",
+      "quantity": "1",
+      "category": "fashion",
+      "image_src": "https://th.bing.com/th/id/OIP.UxHHzd4c17L-J1CS3PHmowHaHa?rs=1&pid=ImgDetMain",
+      "description": "Ampex A18 Multimedia Sub Woofer Speaker System 12000W.",
+      "more_details": ""
     }
   ],
   "cart": [
@@ -61,6 +127,7 @@
       "name": "HP Elitebook x360 830 G6",
       "price": "35000.00",
       "quantity": "1",
+      "category": "electronics",
       "image_src": "https://th.bing.com/th/id/OIP.8gG2K50xH7QIjxrDmxw56wHaHa?rs=1&pid=ImgDetMain",
       "description": "HP Elitebook x360 830 G6 with a ram of 8 GB and a 500 GB SSD.",
       "more_details": "HP Elitebook x360 830 G6 with a ram of 8 GB and a 500 GB SSD.  HP Elitebook 840G with a ram of 8 GB and a 500 GB SSD. HP Elitebook x360 830 G6 with a ram of 8 GB and a 500 GB SSD."
@@ -70,6 +137,7 @@
       "name": "Samsung Galaxy A12",
       "price": "17000.00",
       "quantity": "1",
+      "category": "electronics",
       "image_src": "https://priceinsouthafrica.com/wp-content/uploads/2020/11/Samsung-Galaxy-A12-2048x1785.png",
       "description": "Galaxy A12 has a ram of 4GB and internal storage of 64 GB.",
       "more_details": "Galaxy A12 has a ram of 4GB and internal storage of 64 GB. Galaxy A12 has a ram of 4GB and internal storage of 64 GB. Galaxy A12 has a ram of 4GB and internal storage of 64 GB."

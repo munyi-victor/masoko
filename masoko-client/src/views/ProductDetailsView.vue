@@ -4,6 +4,8 @@ import { useRoute } from "vue-router";
 import axios from "axios";
 import router from "@/router";
 
+import FooterComponent from '@/components/FooterComponent.vue';
+
 const route = useRoute();
 const productId = ref(route.params.productId);
 const product = ref({});
@@ -48,7 +50,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div>
-    <div class="container-fluid">
+    <div class="container-fluid">   
       <div class="card mt-4 p-4">
         <div class="d-flex justify-content-center">
           <div v-if="screnSmall" class="d-flex justify-content-center">
@@ -97,7 +99,7 @@ onBeforeUnmount(() => {
             </button>
             <button class="btn btn-primary btn-dark">Buy now</button>
           </div>
-        </div>
+        </div>       
       </div>
     </div>
   </div>

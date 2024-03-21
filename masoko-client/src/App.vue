@@ -78,12 +78,27 @@ const closeMenu = () => {
         <RouterLink to="/about" @click="removeQuery" class="link"
           >About</RouterLink
         >
+
+        <RouterLink
+          to="/about"
+          @click="removeQuery"
+          style="margin-right: 30px"
+          class="link"
+          >Categories</RouterLink
+        >
       </div>
 
       <div class="d-flex gap-4" v-else>
         <RouterLink to="/" @click="removeQuery" class="link">Home</RouterLink>
         <RouterLink to="/about" @click="removeQuery" class="link"
           >About</RouterLink
+        >
+        <RouterLink
+          to="/about"
+          @click="removeQuery"
+          style="margin-right: 30px"
+          class="link"
+          >Categories</RouterLink
         >
       </div>
 
@@ -118,37 +133,37 @@ const closeMenu = () => {
         v-if="searchQuery"
         class="d-flex-column gap-4 justify-content-center"
       >
-      <h3 class="d-flex justify-content-center">
-        Search results for "{{ searchQuery }}"
-      </h3>
+        <h3 class="d-flex justify-content-center">
+          Search results for "{{ searchQuery }}"
+        </h3>
         <div class="search-cont">
           <div
-          v-for="product in filteredProducts"
-          :key="product.id"
-          class="col-md-4"
-        >
-          <div class="card px-2 d-flex justify-content-center">
-            <img :src="product.image_src" class="card-img-top w-50" />
+            v-for="product in filteredProducts"
+            :key="product.id"
+            class="col-md-4"
+          >
+            <div class="card px-2 d-flex justify-content-center">
+              <img :src="product.image_src" class="card-img-top w-50" />
 
-            <div class="card-body">
-              <h5 class="card-title">{{ product.name }}</h5>
-              <p class="card-text" style="font-weight: bold">
-                {{ product.price }}
-              </p>
-              <p class="card-text">
-                {{ product.description }}
-              </p>
+              <div class="card-body">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text" style="font-weight: bold">
+                  {{ product.price }}
+                </p>
+                <p class="card-text">
+                  {{ product.description }}
+                </p>
 
-              <div class="d-flex gap-2">
-                <RouterLink :to="'/' + product.id"
-                  ><button @click="removeQuery" class="btn btn-primary">
-                    View Product
-                  </button></RouterLink
-                >
+                <div class="d-flex gap-2">
+                  <RouterLink :to="'/' + product.id"
+                    ><button @click="removeQuery" class="btn btn-primary">
+                      View Product
+                    </button></RouterLink
+                  >
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
         <hr />
       </div>
@@ -172,7 +187,7 @@ nav {
   background: rgba(255, 255, 255, 0.1);
   height: 8vh;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-  padding: 4px 20px;
+  padding: 3px 20px;
 }
 
 .nav-links {
@@ -208,12 +223,13 @@ nav {
   height: 10px;
   border-radius: 50%;
   background-color: black;
+  margin-bottom: 3px;
 }
 
 .search-item {
   position: absolute;
   top: 6px;
-  right: 20vw;
+  right: 16vw;
 }
 
 .times {
@@ -227,7 +243,7 @@ nav {
 }
 
 .search-cont {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
@@ -244,7 +260,7 @@ nav {
     gap: 10px;
     position: fixed;
     height: 50vh;
-    align-items: center;
+    align-items: left;
     z-index: 10;
     width: 200px;
     border-radius: 10px;

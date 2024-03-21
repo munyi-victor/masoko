@@ -4,6 +4,7 @@ import CartView from "@/views/CartView.vue";
 import ProductDetailsView from '@/views/ProductDetailsView.vue';
 import NotFoundView from '@/views/NotFoundView.vue';
 import AboutView from '@/views/AboutView.vue';
+import ProductsCategoryView from "@/views/ProductsCategoryView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,13 +20,17 @@ const router = createRouter({
       component: CartView,
     },
     {
-      path: '/about',
-      name: 'about',
+      path: "/about",
+      name: "about",
       component: AboutView,
     },
     {
       path: "/:productId",
       component: ProductDetailsView,
+    },
+    {
+      path: "/:productCategory",
+      component: ProductsCategoryView,
     },
     {
       path: "/:pathMatch(.*)*",

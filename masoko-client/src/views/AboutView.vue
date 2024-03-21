@@ -1,3 +1,6 @@
 <template>
-  <h2>About View</h2>
+  <div class="container">
+    <h2>Masoko Limited</h2>
+    
+  </div>
 </template>

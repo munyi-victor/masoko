@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from "vue-router";
 
 import CartCount from "@/components/CartCount.vue";
+import DropdownComponent from "@/components/DropdownComponent.vue";
 
 import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 import axios from "axios";
@@ -79,13 +80,7 @@ const closeMenu = () => {
           >About</RouterLink
         >
 
-        <RouterLink
-          to="/about"
-          @click="removeQuery"
-          style="margin-right: 30px"
-          class="link"
-          >Categories</RouterLink
-        >
+        <DropdownComponent/>
       </div>
 
       <div class="d-flex gap-4" v-else>
@@ -93,13 +88,7 @@ const closeMenu = () => {
         <RouterLink to="/about" @click="removeQuery" class="link"
           >About</RouterLink
         >
-        <RouterLink
-          to="/about"
-          @click="removeQuery"
-          style="margin-right: 30px"
-          class="link"
-          >Categories</RouterLink
-        >
+        <DropdownComponent/>
       </div>
 
       <div class="d-flex cart-btn">
@@ -201,6 +190,9 @@ nav {
   color: black;
   font-size: 24px;
   font-weight: bold;
+  outline: none;
+  border: none;
+  background: transparent;
 }
 .logo {
   font-family: fantasy;
@@ -223,7 +215,6 @@ nav {
   height: 10px;
   border-radius: 50%;
   background-color: black;
-  margin-bottom: 3px;
 }
 
 .search-item {

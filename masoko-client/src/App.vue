@@ -266,6 +266,7 @@ nav {
 
   .search-item {
     right: 30vw;
+    width: 200px;
   }
 
   .cart-btn {

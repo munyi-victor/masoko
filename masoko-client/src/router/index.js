@@ -3,7 +3,7 @@ import ProductsView from '../views/ProductsView.vue';
 import CartView from "@/views/CartView.vue";
 import ProductDetailsView from '@/views/ProductDetailsView.vue';
 import NotFoundView from '@/views/NotFoundView.vue';
-import AboutView from '@/views/AboutView.vue';
+import ContactView from '@/views/ContactView.vue';
 import ElectronicsView from "@/views/ElectronicsView.vue";
 import FashionView from "@/views/FashionView.vue";
 
@@ -21,9 +21,9 @@ const router = createRouter({
       component: CartView,
     },
     {
-      path: "/about",
-      name: "about",
-      component: AboutView,
+      path: "/contact-us",
+      name: "contact-us",
+      component: ContactView,
     },
     {
       path: "/:productId",

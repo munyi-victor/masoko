@@ -2,6 +2,8 @@
 import { ref, onMounted } from "vue";
 import axios from "axios";
 
+import FooterComponent from "@/components/FooterComponent.vue";
+
 const products = ref([]);
 
 const fetchProducts = async () => {
@@ -53,6 +55,7 @@ onMounted(fetchProducts);
         </div>
         </div>
       </div>
+      <FooterComponent/>
     </div>
   </div>
 </template>

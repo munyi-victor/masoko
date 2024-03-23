@@ -3,6 +3,7 @@ import { RouterLink, RouterView } from "vue-router";
 
 import CartCount from "@/components/CartCount.vue";
 import DropdownComponent from "@/components/DropdownComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
 
 import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 import axios from "axios";
@@ -76,19 +77,18 @@ const closeMenu = () => {
 
       <div class="nav-links bg-light shadow" v-if="smallScreen" ref="menu">
         <RouterLink to="/" @click="removeQuery" class="link">Home</RouterLink>
-        <RouterLink to="/about" @click="removeQuery" class="link"
-          >About</RouterLink
+        <DropdownComponent />
+        <RouterLink to="/contact-us" @click="removeQuery" class="link"
+          >Contact</RouterLink
         >
-
-        <DropdownComponent/>
       </div>
 
       <div class="d-flex gap-4" v-else>
         <RouterLink to="/" @click="removeQuery" class="link">Home</RouterLink>
-        <RouterLink to="/about" @click="removeQuery" class="link"
-          >About</RouterLink
+        <DropdownComponent />
+        <RouterLink to="/contact-us" @click="removeQuery" class="link"
+          >Contact</RouterLink
         >
-        <DropdownComponent/>
       </div>
 
       <div class="d-flex cart-btn">
@@ -165,6 +165,8 @@ const closeMenu = () => {
     <h5>The items you searched for are not available.</h5>
   </div>
 
+  <!-- <FooterComponent /> -->
+
   <RouterView />
 </template>
 
@@ -188,11 +190,12 @@ nav {
 .link {
   text-decoration: none;
   color: black;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   outline: none;
   border: none;
   background: transparent;
+  margin-top: 4px;
 }
 .logo {
   font-family: fantasy;

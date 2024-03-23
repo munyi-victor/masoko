@@ -34,10 +34,11 @@ const toggleDropdown = () => {
 .link {
   text-decoration: none;
   color: black;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   outline: none;
   border: none;
   background: transparent;
+  margin-top: 4px;
 }
 </style>

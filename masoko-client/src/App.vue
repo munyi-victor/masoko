@@ -5,6 +5,8 @@ import CartCount from "@/components/CartCount.vue";
 import DropdownComponent from "@/components/DropdownComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 
+import ScrollToTop from "@/components/ScrollToTop.vue";
+
 import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 import axios from "axios";
 
@@ -13,6 +15,8 @@ const products = ref([]);
 const menu = ref();
 const isMenuOpen = ref(false);
 const smallScreen = ref(false);
+
+const navbar = ref();
 
 try {
   axios.get("http://localhost:3000/products").then((response) => {
@@ -60,7 +64,7 @@ const closeMenu = () => {
 
 <template>
   <header>
-    <nav class="nav">
+    <nav class="nav" ref="navbar">
       <div>
         <RouterLink to="/" @click="removeQuery" class="link logo under-line"
           >Masoko</RouterLink
@@ -165,12 +169,19 @@ const closeMenu = () => {
     <h5>The items you searched for are not available.</h5>
   </div>
 
+  <ScrollToTop/>
   <!-- <FooterComponent /> -->
 
   <RouterView />
 </template>
 
 <style scoped>
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 nav {
   display: flex;
   gap: 20px;

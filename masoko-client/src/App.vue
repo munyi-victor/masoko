@@ -19,6 +19,7 @@ const isMenuOpen = ref(false);
 const smallScreen = ref(false);
 
 const isSticky = ref(false);
+const navbarOffsetTop = ref(0);
 
 try {
   axios.get("http://localhost:3000/products").then((response) => {
@@ -39,7 +40,11 @@ const checkScreenSize = () => {
 };
 
 const handleScroll = () => {
-  isSticky.value = window.screenY > 20;
+  if (window.pageYOffset > navbarOffsetTop.value) {
+    isSticky.value = true;
+  } else {
+    isSticky.value = false;
+  }
 }
 
 onMounted(() => {
@@ -73,7 +78,7 @@ const closeMenu = () => {
 
 <template>
   <header>
-    <nav class="nav" :class="{'fixed-nav': isSticky}">
+    <nav class="nav" :class="{'fixed-nav': isSticky}" ref="navbar">
       <div>
         <RouterLink to="/" @click="removeQuery" class="link logo under-line"
           >Masoko</RouterLink
@@ -188,8 +193,9 @@ const closeMenu = () => {
 .fixed-nav {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
+  z-index: 1000;
+  background: #fefefe;
 }
 
 nav {

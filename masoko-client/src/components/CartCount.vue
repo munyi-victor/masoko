@@ -1,21 +1,9 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import axios from 'axios';
-
-const cartItemsCount = ref(0);
-
-onMounted(async () => {
-  try {
-    const response = await axios.get("http://localhost:3000/cart");
-    cartItemsCount.value = response.data.length;
-  } catch (error) {
-    console.error("Error fetching cart items: ", error)
-  }
-})
+import { cartCount } from '@/reducers/getReducers';
 </script>
 
 <template>
-  <div>{{ cartItemsCount }}</div>
+  <div>{{ cartCount }}</div>
 </template>
 
 <style scoped>

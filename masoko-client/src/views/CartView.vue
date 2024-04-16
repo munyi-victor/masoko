@@ -2,6 +2,8 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import axios from "axios";
 
+import { remFun } from "@/reducers/getReducers";
+
 const cartItems = ref([]);
 const totalAmount = ref(0);
 const screenSmall = ref(false);
@@ -36,6 +38,7 @@ const removeFromCart = async (productId) => {
     await axios.delete(`http://localhost:3000/cart/${productId}`);
     cartItems.value = cartItems.value.filter((item) => item.id !== productId);
     calculateTotalAmount();
+    remFun();
   } catch (error) {
     console.error("Error removing from cart.", error);
   }
@@ -102,7 +105,7 @@ const updateTotalAmount = () => {
       <div class="pay-section">
         <div class="w-100 d-flex gap-2 justify-content-center">
           <h5>Pay via:</h5>
-          <select class="w-75" v-model="paymentMethod">
+          <select class="w-75">
             <option value="M-Pesa">M-Pesa</option>
             <option value="PayPal">PayPal</option>
           </select>

@@ -6,6 +6,8 @@ import router from "@/router";
 
 import FooterComponent from '@/components/FooterComponent.vue';
 
+import { addFun } from "@/reducers/getReducers";
+
 const route = useRoute();
 const productId = ref(route.params.productId);
 const product = ref({});
@@ -25,6 +27,7 @@ const fetchProducts = async () => {
 const addToCart = async (product) => {
   try {
     axios.post("http://localhost:3000/cart", product);
+    addFun();
     router.push("/cart");
   } catch (error) {
     console.error("Error adding to cart: ", error);

@@ -10,13 +10,15 @@ import ScrollToTop from "@/components/ScrollToTop.vue";
 import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 import axios from "axios";
 
+import { getCartItems } from "./reducers/getReducers";
+
 const searchQuery = ref("");
 const products = ref([]);
 const menu = ref();
 const isMenuOpen = ref(false);
 const smallScreen = ref(false);
 
-const navbar = ref();
+const isSticky = ref(false);
 
 try {
   axios.get("http://localhost:3000/products").then((response) => {
@@ -36,13 +38,20 @@ const checkScreenSize = () => {
   smallScreen.value = window.innerWidth <= 760;
 };
 
+const handleScroll = () => {
+  isSticky.value = window.screenY > 20;
+}
+
 onMounted(() => {
+  getCartItems();
   checkScreenSize();
   window.addEventListener("resize", checkScreenSize);
+  window.addEventListener("scroll", handleScroll);
 });
 
 onBeforeUnmount(() => {
   window.removeEventListener("resize", checkScreenSize);
+  window.removeEventListener("scroll", handleScroll);
 });
 
 const removeQuery = () => {
@@ -64,7 +73,7 @@ const closeMenu = () => {
 
 <template>
   <header>
-    <nav class="nav" ref="navbar">
+    <nav class="nav" :class="{'fixed-nav': isSticky}">
       <div>
         <RouterLink to="/" @click="removeQuery" class="link logo under-line"
           >Masoko</RouterLink
@@ -179,6 +188,7 @@ const closeMenu = () => {
 .fixed-nav {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
 }
 
@@ -295,6 +305,4 @@ nav {
     flex-direction: column;
   }
 }
-
-/* https://th.bing.com/th/id/OIP.dQsyGVU2ZnERbE61glQurgHaHa?rs=1&pid=ImgDetMain */
 </style>
